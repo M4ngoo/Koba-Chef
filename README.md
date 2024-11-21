@@ -19,4 +19,13 @@ The recipes page fetches all the recipes dynamically from a mongo DB and it has 
 ![kobarecipesfilter](https://github.com/user-attachments/assets/585b42d5-ad6f-463c-bea5-54d25efe9842)
 Recipe Page
 ![kobarecipe](https://github.com/user-attachments/assets/afd81e3d-e702-4744-ba05-e8508b71acbd)
-
+![kobarecipeinfo](https://github.com/user-attachments/assets/af0a58e5-3844-4030-8e9d-d52456ea2a49)
+Cart Page
+![kobacart](https://github.com/user-attachments/assets/ccfa1e12-630a-4176-a975-9a47f7bcba3d)
+In the cart page you can write your own review on the specified recipe and rate it
+![kobareview](https://github.com/user-attachments/assets/6e5ef0e2-a9d7-4699-9ecf-d3a12c3e4ed4)
+The Profile page has a nutrition calendar section in which you can organize your diet per day and see what your daily and weekly nutrient value is
+![kobacalendar](https://github.com/user-attachments/assets/33d67fff-26e2-4d30-9da5-4b41589c0b1e)
+Contact Page
+The contact page lets you talk to a professional nutritionist and chat with them
+![kobacontact](https://github.com/user-attachments/assets/aa919f7c-a1be-48aa-a394-7ce77c51355b)

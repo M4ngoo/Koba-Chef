@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesmobile.css">
+    <script src="toscriptmou.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Assets/koba_logo.png">
+                
+    <title>Landing Page</title>
+</head>
+<body onload="showLoginProfile()">
+    
+    <!-- Header --> 
+
+    <header>
+        <a href="index.html">
+        <section class="head_logo">
+            <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+            <h1>KOBACHEF</h1>
+        </section></a>
+        <section class="head_rest">
+            <ul>
+                <li><a href="" id="contact">Contact</a></li>
+                <li><a href="allrecipes.html">Recipes</a></li>
+                <li><a href="" id="cart">Cart</a></li>
+                <button id="login-profile"></button>
+                <!-- <button id="profileBtn" onclick="checkLogin()">Profile</button> -->
+            </ul>
+        </section>
+    </header>
+
+    <dialog id="login-dialog">
+        <!-- <button id="close-login-dialog" class="close-btn">X</button> -->
+        <form>
+            <section class="login-container">
+                <label for="login-username">Enter your username:
+                    <input type="text" id="login-username" name="login-username" required>
+                </label>
+                <label for="login-password">Enter your password:
+                    <input type="password" id="login-password" name="login-password" required>
+                </label>
+                <input type="button" class="login-submit" onclick="login()" value="Login">
+            </section>
+        </form>
+        <p class="sign_up_link"><a href=signup.html>Dont have an account? Sign Up!</a></p>
+    </dialog>
+  
+    <main>
+
+        <!-- Hero Section -->
+
+        <article class="hero">
+            <section class="hero-text">
+                <h2 class="typical-header">Reach your goals</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu nulla eget ipsum fermentum interdum sit amet et dolor. Praesent quis ipsum sagittis, convallis mauris ac, pellentesque ex. Aliquam mollis eget turpis eu pellentesque. Curabitur suscipit efficitur nisl, nec venenatis libero molestie ac. Nulla id arcu elit. Pellentesque nec posuere eros. Nam eu velit lorem. Nullam sodales ut ante sed scelerisque. Donec massa libero, accumsan nec tortor a, interdum dapibus diam. Fusce laoreet elit in egestas feugiat. Nullam maximus consectetur neque ut posuere.</p>
+                <div class="hero-btns">
+                    <a href="allrecipes.html"><button class="recipe-btn" href="allrecipes.html">Go To Recipes</button></a>
+                    <a href="signup.html"><button class="sign-up-btn">Sign Up</button></a>
+                </div>
+            </section>
+            <img src="Assets/fruit_salad_bowl.png" alt="bowl of fruit salad">
+        </article>
+
+        <!-- Featured Recipes -->
+
+        <article class="featured">
+            <h2 class="typical-header">Featured Recipes</h2>
+            <section class = "featured-recipes-container">
+                <div class="featured-recipe">
+                    <img src="Assets/makis_petratzikis.jpg" class="featured-recipe-chef" alt="face portrait of chef petratzikis">
+                    <img src="Assets/beef_bowl.png" class="featured-recipe-icon">
+                    <h3>Beef Bowl</h3>
+                    <p>Makis Petratzikis</p>   
+                </div>
+                <div class="featured-recipe">
+                    <img src="Assets/kolovou.jpg" class="featured-recipe-chef" alt="face portrait of chef kolovou">
+                    <img src="Assets/avocado_toast.png" class="featured-recipe-icon">
+                    <h3>Avocado Toast</h3>
+                    <p>Maria Kolovou</p>   
+                </div>
+                <div class="featured-recipe">
+                    <img src="Assets/dysthxhs_gletsas.jpg" class="featured-recipe-chef" alt="face portrait of chef gletsas">
+                    <img src="Assets/bruschetta.png" class="featured-recipe-icon">
+                    <h3>Bruschetta</h3>
+                    <p>Dysthxhs Gletsas</p>   
+                </div>        
+            </section>
+        </article>
+
+        <!-- Features - Reviews -->
+
+        <article class="gray-index">
+            <h2>Features</h2>
+            <section class="features-container">
+                <div>
+                    <img src="Assets/lemon.png" alt="lemon pie with its ingredients">
+                    <h3>Recipes</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dui a nisl molestie scelerisque. Vivamus accumsan, arcu pulvinar suscipit egestas, orci orci blandit elit, hendrerit pretium ipsum nisl vel.</p>
+                </div>
+                <div>
+                    <img src="Assets/calendar.png" alt="calendar">
+                    <h3>Nutrition Calendar</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dui a nisl molestie scelerisque. Vivamus accumsan, arcu pulvinar suscipit egestas, orci orci blandit elit, hendrerit pretium ipsum nisl vel.</p>
+                </div>
+                <div>
+                    <img src="Assets/contact.png" alt="speech bubbles">
+                    <h3>Help by Nutritionists</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum dui a nisl molestie scelerisque. Vivamus accumsan, arcu pulvinar suscipit egestas, orci orci blandit elit, hendrerit pretium ipsum nisl vel.</p>
+                </div>
+            </section>
+            <hr>    
+            <section class="app-reviews-container">
+                <div class="app-review">
+                    <img src="Assets/giannis_vousvoukys.jpg" alt="face portrait of giannis vousvoukys" class="user-review-img">
+                    <img src="Assets/quotes.png" alt="quote icon" class="quote-icon">
+                    <div class="user-review-text">
+                        <p class="user-review-exp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius lacus vel posuere pellentesque. Cras a tortor in urna vestibulum vehicula eget eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p class="user-review-name">-  Giannis Vousvoukys</p>
+                    </div>
+                </div>
+                <hr class="review-hr">
+                <div class="app-review">
+                    <div class="user-review-text">
+                        <p class="user-review-exp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius lacus vel posuere pellentesque. Cras a tortor in urna vestibulum vehicula eget eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p class="user-review-name">-  Stamatis Koularis</p>
+                    </div>
+                    <img src="Assets/quotes.png" alt="quote icon" class="quote-icon">
+                    <img src="Assets/stamatis_koularis.jpg" alt="face portrait of stamatis Koularis" class="user-review-img">
+                </div>
+                <hr class="review-hr">
+                <div class="app-review">
+                    <img src="Assets/oikonomou.jpg" alt="face portrait of eleni Oikonomou" class="user-review-img">
+                    <img src="Assets/quotes.png" alt="quote icon" class="quote-icon">
+                    <div class="user-review-text">
+                        <p class="user-review-exp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius lacus vel posuere pellentesque. Cras a tortor in urna vestibulum vehicula eget eget erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p class="user-review-name">-  Eleni Oikonomou</p>
+                    </div>
+                </div>
+
+
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+        <section class="footer-koba">
+            
+            <!-- Left Side of Footer-->
+
+            <section class="head_logo">
+                <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+                <h1 id="footer-heading">KOBACHEF</h1>
+            </section>
+            <section class="social-media">
+                <img src="Assets/linkedin.png">
+                <img src="Assets/facebook.png">
+                <img src="Assets/twitter.png">
+                <img src="Assets/instagram.png">
+            </section>
+            <section class="trademark"> 
+                <p>@2023 KOBACHEF, All rights reserved</p>
+            </section>
+        </section>
+
+            <!-- Right Side of Footer-->
+            
+            <section class="footer-info">
+                <section class="footer-product">
+                    <h4>Product</h4>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </section>
+                <section class="footer-company">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>Terms and Conditions</li>
+                        <li>About Us</li>
+                        <li>Support</li>
+                        <li>Blog</li>
+                    </ul>
+                </section>
+            </section>
+
+    </footer>
+
+</body>
+</html>

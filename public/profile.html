@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesmobile.css">
+    <script src="toscriptmou.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Assets/koba_logo.png">
+           
+    <title>Profile</title>
+</head>
+<body onload="getProfile('user')">
+    
+        <!-- Header --> 
+
+    <header>
+        <a href="index.html">
+        <section class="head_logo">
+            <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+            <h1>KOBACHEF</h1>
+        </section></a>
+        <section class="head_rest">
+            <ul>
+                <li><a href="" id="contact">Contact</a></li>
+                <li><a href="allrecipes.html">Recipes</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <button id="login-profile" onclick="checkLoggedIn()">Profile</button>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+
+        <!-- Profile Info -->
+        <button onclick="logOut()" class="logout_btn" id="profile_btn">Log out</button>
+        <article class="profile-info">
+            <div class="circle"><img id="profileImage"></div>
+            <h2>My Profile</h2>
+            <section class="profile-info-container">
+                <div class="profile-details personal">
+                    <h4>Personal Details</h4>
+                    <hr>
+                    <ul id="personalInfo">
+                        <li><span>Username:</span></li>
+                        <li><span>Age:</span></li>
+                        <li><span>Gender:</span></li>
+                        <li><span>Location:</span></li>
+                    </ul>
+                </div>
+                <div class="profile-details bio">
+                    <h4>Bio</h4>
+                    <hr>
+                    <p id="bio"></p>
+                </div>
+            </section>
+        </article>
+
+        <!-- Favorites -->
+        <article class="favorites profile-info">
+            <h2>Favorites</h2>
+            <section class="favorites-container" id="favoritesSection"></section>
+        </article>
+
+        <!-- Nutritional Calendar -->
+        <h2 style="text-align: center;">Nutritional Calendar</h2>
+        <article class="nutritional-calendar">
+            <section class="macros" id="weekly">
+                    <h4>Weekly</h4>
+                    <hr>
+                    <ul id="weekly-nutrients">
+                        <li>Calories: </li>
+                        <li>Protein: </li>
+                        <li>Fat: </li>
+                        <li>Carbohydrates: </li>
+                        <li>Fiber: </li>
+                        <li>Sugars: </li>
+                    </ul>
+            </section>
+            <section class="daily">
+                <div class="daily-macros">
+                    <section class="macros">
+                        <h4>Program</h4>
+                        <hr>
+                        <ul id="program"></ul>
+                    </section>
+                    <section class="macros">
+                        <h4 id="program-day"></h4>
+                        <hr>
+                        <ul id="daily-nutrients">
+                            <li>Calories: </li>
+                            <li>Protein: </li>
+                            <li>Fat: </li>
+                            <li>Carbohydrates: </li>
+                            <li>Fiber: </li>
+                            <li>Sugars: </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="daily-btns">
+                    <button id="buttonPrevious" onclick="changeProgramDay('prev')"><</button>
+                    <button id="buttonNext" onclick="changeProgramDay('next')">></button>
+                </div>
+            </section>
+        </article>
+    </main>
+
+     <!-- Footer -->
+
+     <footer>
+        <section class="footer-koba">
+            
+            <!-- Left Side of Footer-->
+
+            <section class="head_logo">
+                <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+                <h1 id="footer-heading">KOBACHEF</h1>
+            </section>
+            <section class="social-media">
+                <img src="Assets/linkedin.png">
+                <img src="Assets/facebook.png">
+                <img src="Assets/twitter.png">
+                <img src="Assets/instagram.png">
+            </section>
+            <section class="trademark"> 
+                <p>@2023 KOBACHEF, All rights reserved</p>
+            </section>
+        </section>
+
+            <!-- Right Side of Footer-->
+            
+            <section class="footer-info">
+                <section class="footer-product">
+                    <h4>Product</h4>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </section>
+                <section class="footer-company">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>Terms and Conditions</li>
+                        <li>About Us</li>
+                        <li>Support</li>
+                        <li>Blog</li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+</body>
+</html>

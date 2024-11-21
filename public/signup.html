@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesmobile.css">
+    <script src="toscriptmou.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Assets/koba_logo.png">
+       
+    <title>Sign Up</title>
+    <style>
+        dialog::backdrop{
+            background-color: hsla(0, 0%, 34%, 0.541);
+        }
+    </style>
+</head>
+<body onload="showLoginProfile()">
+
+    <!-- Header --> 
+
+    <header>
+        <a href="index.html">
+        <section class="head_logo">
+            <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+            <h1>KOBACHEF</h1>
+        </section></a>
+        <section class="head_rest">
+            <ul>
+                <li><a href="" id="contact">Contact</a></li>
+                <li><a href="allrecipes.html">Recipes</a></li>
+                <li><a href="" id="cart">Cart</a></li>
+                <button id="login-profile" onclick="loginDialogOpen()">Login</button>
+            </ul>
+        </section>
+    </header>
+
+    <dialog id="login-dialog">
+        <!-- <button id="close-login-dialog" class="close-btn">X</button> -->
+        <form>
+            <section class="login-container">
+                <label for="login-username">Enter your username:
+                    <input type="text" id="login-username" name="login-username" required>
+                </label>
+                <label for="login-password">Enter your password:
+                    <input type="password" id="login-password" name="login-password" required>
+                </label>
+                <input type="button" class="login-submit" onclick="login()" value="Login">
+
+            </section>
+        </form>
+        <p class="sign_up_link"><a href=signup.html>Dont have an account? Sign Up!</a></p>
+    </dialog>
+
+    <main>
+        <h2 class="sign-header">Sign Up</h2>
+        <article class="sign-container">
+            <section>
+                <img src="Assets/icons8-kawaii-taco-100.png">
+                <button id="sign-btn"><h4 class="sign-type-header">Sign Up as a User</h4></button>
+                <dialog id="user-sign">
+                    <button id="close-btn" class="close-btn">Close</button>
+                    <section class="dialog-container">
+                    <h2 class="dialog-header">Create your account</h2>
+                        <form id="userForm">
+                            <div>
+                                <label for="username">Enter your username:
+                                    <input type="text" id="username" name="username" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="location">Enter your location:
+                                    <input type="text" id="location" name="location" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="gender">Select your gender
+                                    <select id="gender" name="gender" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="age">Enter your age: 
+                                    <input type="number" min="13" max="100" id="age" name="age" required/>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="email">Enter your email:
+                                    <input type="email" name="email" id="email" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="new_password">Create a new password:
+                                    <input type="password" name="new_password" id="new_password" pattern="[a-z0-5]{8,}"   required>
+                                </label>
+                            </div>
+                            <label for="bio">Provide a bio:
+                                <textarea id="bio" name="bio" rows="8" cols="55" placeholder="I want to lose weight..."></textarea>
+                            </label>
+                            <label for="user-img">Upload your image:
+                                <input type="file" name="file" id="userFile">
+                            </label>
+                            <button onclick="registerAsUser('user')" type="button" class="sign-submit-btn" id="user-btn">Register</button>
+                        </form>
+                    </section>
+                </dialog>
+            </section>
+            <section>
+                <img src="Assets/icons8-chef-100.png">
+                <button id="chef-sign-btn"><h4 class="sign-type-header">Sign Up as a Chef</h4></button>
+                <dialog id="chef-sign">
+                    <button id="chef-close-btn" class="close-btn">Close</button>
+                    <section class="dialog-container">
+                        <h2 class="dialog-header">Create your account</h2>
+                        <form id="chefForm">
+                            <div>
+                                <label for="username">Enter your username:
+                                    <input type="text" id="username" name="username" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="location">Enter your location:
+                                    <input type="text" id="location" name="location" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="gender">Select your gender
+                                    <select id="gender" name="gender" required>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="age">Enter your age: 
+                                    <input type="number" min="13" max="100" id="age" name="age" required/>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="email">Enter your email:
+                                    <input type="email" name="email" id="email" required>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="new_password">Create a new password:
+                                    <input type="password" name="new_password" id="new_password" pattern="[a-z0-5]{8,}"   required>
+                                </label>
+                            </div>
+                            <label id=#bio for="bio">Provide a bio:
+                                <textarea id="bio" name="bio" rows="8" cols="55" placeholder="I want to lose weight..."></textarea>
+                            </label>
+                            <label for="user-img">Upload your image:
+                                <input type="file" name="file" id="chefFile">
+                            </label>
+                            <button onclick="registerAsUser('chef')" type="button" class="sign-submit-btn" id="chef-btn">Register</button>
+                        </form>
+
+                    </section>
+                </dialog>
+            </section>
+        </article>
+    </main>
+
+     <!-- Footer -->
+
+     <footer>
+        <section class="footer-koba">
+            
+            <!-- Left Side of Footer-->
+
+            <section class="head_logo">
+                <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+                <h1 id="footer-heading">KOBACHEF</h1>
+            </section>
+            <section class="social-media">
+                <img src="Assets/linkedin.png">
+                <img src="Assets/facebook.png">
+                <img src="Assets/twitter.png">
+                <img src="Assets/instagram.png">
+            </section>
+            <section class="trademark"> 
+                <p>@2023 KOBACHEF, All rights reserved</p>
+            </section>
+        </section>
+
+            <!-- Right Side of Footer-->
+            
+            <section class="footer-info">
+                <section class="footer-product">
+                    <h4>Product</h4>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </section>
+                <section class="footer-company">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>Terms and Conditions</li>
+                        <li>About Us</li>
+                        <li>Support</li>
+                        <li>Blog</li>
+                    </ul>
+                </section>
+            </section>
+
+            <script>
+                const openButton = document.getElementById('sign-btn')
+                const closeButton = document.getElementById('close-btn')
+                const modal = document.getElementById('user-sign')
+
+                const openChefButton = document.getElementById('chef-sign-btn')
+                const closeChefButton = document.getElementById('chef-close-btn')
+                const chefModal = document.getElementById('chef-sign')
+
+
+                openButton.addEventListener("click",() => {
+                    modal.showModal()
+                })
+
+                closeButton.addEventListener("click",() => {
+                    modal.close()
+                })
+
+                openChefButton.addEventListener("click",() => {
+                    chefModal.showModal()
+                })
+
+                closeChefButton.addEventListener("click",() => {
+                    chefModal.close()
+                })
+
+            </script>
+
+    </footer>
+
+
+</body>
+</html>

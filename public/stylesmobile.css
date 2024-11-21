@@ -1,0 +1,300 @@
+@media screen and (max-width:450px){
+
+    *,::after,::before{
+        margin: 0;
+        padding: 0;
+    }
+
+    header{
+        flex-direction: column;
+        padding:5rem 0;
+        align-items: center;
+        justify-content: center;
+        height:0;
+        gap:1rem;
+    }
+
+    .head_logo{
+        justify-content: center;
+        margin-left: 0;
+        gap:0;
+    }
+
+    .head_rest > ul{
+        gap:2rem;
+        margin-right: 0;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        margin-top:0;
+        padding:2rem 0;
+        gap:2rem;
+        align-content: center;
+    }
+
+    h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .footer-koba{
+        margin-right: 0;
+    }
+
+    .social-media{
+        gap:1.75rem;   
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .trademark{
+        display: none;
+    }
+
+    .footer-info{
+        flex-direction: column;
+        align-items: center;
+        gap:3rem;
+        margin-top:1rem;
+        text-align: center;
+    }    
+
+    .footer-info h4{
+        font-size: 2.5rem;
+    }
+    
+    .footer-info li{
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero{
+        flex-direction: column;
+        margin-top:2rem;
+        padding:0 1rem;
+        align-items: center;
+    }
+
+    .hero-text{
+        margin-right: 0;
+        padding:0;
+        gap:2rem;
+    }
+
+    .hero-text p{
+        font-size: 1.25rem;
+    }
+
+    .hero-btns{
+        align-self: center;
+    }
+
+    .hero img{
+        margin:0;
+        width:30rem;
+        height:25rem;
+        
+    }
+
+    .featured{
+        gap:5rem;
+        padding:1rem;
+    }
+
+    
+
+    .featured-recipes-container{
+        flex-direction: column;
+        gap:5rem;
+        justify-content: none;
+    }
+
+    .features-container{
+        flex-direction: column;
+        gap:6rem;
+        margin-top: 3.5rem;
+    }
+    
+    .app-review{
+        flex-direction: column;
+        align-self: center;
+        padding:0rem;
+    }
+    
+    .quote-icon{
+        display: none;
+    }
+
+    .user-review-img{
+        align-self: center;
+        margin-top: 0;
+    }
+
+    .app-reviews-container{
+        gap:5rem;
+        padding:0 2rem;
+        margin-top: 5rem;
+    }
+
+    #koularis-review{
+        flex-direction: column-reverse;
+    }
+    
+    .review-hr{
+        width:100%;
+        margin:0;
+        border:0.2rem solid #EEE6DE;
+    }
+
+    .review-hr:nth-child(2){
+        margin:0rem;
+    }
+
+    .filter-recipes{
+        gap:3rem;
+        flex-direction: column;
+        padding:0;
+        align-content: center;
+        box-sizing:content-box;
+        
+    }
+
+    .filter{
+        margin:-7rem 2rem 1rem 2rem;
+        padding:1rem;
+
+    }
+
+    .filter hr{
+        width:18rem;
+    }
+
+    /* .filter-recipes{
+        flex-direction:;
+    } */
+    
+    .recipes-container{
+        justify-content: center;
+        margin-bottom: 10rem;
+    }
+
+    .recipe-body > h2{
+        font-size: 4rem;
+    }
+    
+    .recipe-visual{
+        flex-direction: column;
+        gap:3rem;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+
+    .recipe-line{
+        transform: rotate(90deg);
+        margin-top: -25rem;
+    }
+
+    .recipe-info{
+        margin-top: -19rem;
+    }
+
+    .recipe-info li{
+        width:100%;
+        margin-bottom: 2rem;
+    }
+
+    .recipe-info > h3{
+        margin-bottom: 2rem;
+    }
+
+    .recipe_btns_container{
+        margin:2rem 0 0 0;
+        align-self: center;
+    }
+
+    .instructions-macros-container{
+        flex-direction: column;
+        gap:5rem;
+        width:100%;
+        padding:1rem;
+        
+    }
+
+    .instructions{
+        font-size: 1.35rem;
+    }
+
+    .review{
+        flex-direction: column;
+        width:70%;
+        margin-left: 0;
+        height: auto;
+        align-items: center;
+    }
+    
+    .review-text{
+        gap:1.25rem;
+    }
+
+    .review-text > p{
+        font-size: 1.15rem;
+        align-self: center;
+    }
+
+    .review-text > h4{
+        align-self: center;
+    }
+    
+    .add-review{
+        width:80%;
+    }
+
+    #profile_btn{
+        align-self: center;
+        margin-right:0rem;
+        margin-bottom: -5rem;
+    }
+
+    .profile-info-container{
+        flex-direction: column;
+        gap:2rem;
+    }
+
+    .favorites-container{
+        flex-direction: column;
+    }
+
+    .nutritional-calendar{
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    .daily .daily-macros{
+        flex-direction: column;
+    }
+    
+    .macros{
+        width:50%;
+        align-self: center;
+    }
+
+    .cart{
+        border-radius: 0;
+        margin-bottom: 5rem;
+        padding:3rem;
+    }
+
+    .cart li{
+        width:auto;
+    }
+    
+
+
+
+
+
+
+}

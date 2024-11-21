@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesmobile.css">
+    <script src="toscriptmou.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Assets/koba_logo.png">
+       
+    <title>Recipe Page</title>
+</head>
+<body onload="getRecipe()">
+    
+    <!-- Header --> 
+
+    <header>
+        <a href="index.html">
+        <section class="head_logo">
+            <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+            <h1>KOBACHEF</h1>
+        </section></a>
+        <section class="head_rest">
+            <ul>
+                <li><a href="" id="contact">Contact</a></li>
+                <li><a href="allrecipes.html">Recipes</a></li>
+                <li><a href="" id="cart">Cart</a></li>
+                <button id="login-profile"></button>
+            </ul>
+        </section>
+    </header>
+
+    <dialog id="programDialog">
+        <form>
+            <section class="dialog-container">
+                <h2 id="program_header">Add to your program</h2>
+                <form>
+                    <div class="program_container" id="program-container">
+                        <label for="monday" class="container">Monday
+                            <input type="checkbox" value="monday" id="monday" name="day">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="tuesday" class="container">Tuesday
+                            <input type="checkbox" value="tuesday" id="tuesday" name="day">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="wednesday" class="container">Wednesday
+                            <input type="checkbox" value="wednesday" id="wednesday" name="day">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="thursday" class="container">Thursday
+                            <input type="checkbox" value="thursday" id="thursday" name="day">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="friday" class="container">Friday
+                            <input type="checkbox" value="friday" id="friday" name="day">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="saturday" class="container">Saturday
+                            <input type="checkbox" value="saturday" id="saturday" name="day">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="sunday" class="container">Sunday
+                            <input type="checkbox" value="sunday" id="sunday" name="day">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <input type="button" value="Submit" id="submit_program_button" onclick="addToProgram()">
+                </form>
+            </section>
+        </form>
+    </dialog>
+
+    <dialog id="login-dialog">
+        <!-- <button id="close-login-dialog" class="close-btn">X</button> -->
+        <form>
+            <section class="login-container">
+                <label for="login-username">Enter your username:
+                    <input type="text" id="login-username" name="login-username" required>
+                </label>
+                <label for="login-password">Enter your password:
+                    <input type="password" id="login-password" name="login-password" required>
+                </label>
+                <input type="button" class="login-submit" onclick="login()" value="Login">
+
+            </section>
+        </form>
+        <p class="sign_up_link"><a href=signup.html>Dont have an account? Sign Up!</a></p>
+    </dialog>
+    
+    <!-- Main Content-->
+    <main>
+        
+        <article class="recipe-body">
+            <h2 id="recipeName"></h2>
+        
+        <!-- Visual of the recipe -->
+
+            <section class="recipe-visual">
+                <img id="recipeImg">
+                <div class="recipe-line"></div>
+                <div class="recipe-info">
+                <ul id="basicDetails">
+                        <li>Servings: </li>
+                        <li>Prepping Time: </li>
+                        <li>Cooking Time: </li>
+                </ul>
+                <h3>Ingredients</h3>
+                <ul id="ingredients">
+                </ul>
+                </div>
+            </section>
+
+            <!-- Instructions / Macros of the recipe -->
+            
+            <div class="recipe_btns_container">
+                <button class="recipe_add_btn" id="add_to_favorites" onclick="addToFavorites()">Add to favorites</button>
+                <button class="recipe_add_btn" id="add_to_program" onclick="dialogOpen('programDialog')">Add to Program</button>
+            </div>
+
+            <section class="instructions-macros-container">
+                <section class="instructions">
+                    <h2>Instructions</h2>
+                    <p id="instructions"></p>
+                </section>
+                <div class="macros">
+                    <h4>Nutrients</h4>
+                    <hr>
+                    <ul id="nutrients">
+                        <li>Calories: </li>
+                        <li>Protein: </li>
+                        <li>Fat: </li>
+                        <li>Carbohydrates: </li>
+                        <li>Sugars: </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Reviews -->
+
+            <section class="reviews">
+                <h2>Reviews <span id="overallRating"></span></h2>
+                <section class="reviews-container" id="reviews-section">
+                </section>
+                    <button class="add-review" id="dialog_review" onclick="dialogOpen('reviewDialog')">Add your Review <span>+</span></button>
+            </section>
+
+        </article>
+
+        <dialog id="reviewDialog">
+            <form>
+                <section class="dialog-container">
+                    <h2>Add your rating</h2>
+                    <input type="number" id="reviewNumber">
+                    <textarea cols="50" rows="10" id="reviewText"></textarea>
+                    <input type="button" value="Submit" id="submit_review_button" onclick="submitReview()">
+                </section>
+            </form>
+        </dialog>
+        
+    </main>
+
+        <!-- Footer -->
+
+        <footer>
+            <section class="footer-koba">
+                
+                <!-- Left Side of Footer-->
+    
+                <section class="head_logo">
+                    <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+                    <h1 id="footer-heading">KOBACHEF</h1>
+                </section>
+                <section class="social-media">
+                    <img src="Assets/linkedin.png">
+                    <img src="Assets/facebook.png">
+                    <img src="Assets/twitter.png">
+                    <img src="Assets/instagram.png">
+                </section>
+                <section class="trademark"> 
+                    <p>@2023 KOBACHEF, All rights reserved</p>
+                </section>
+            </section>
+    
+                <!-- Right Side of Footer-->
+                
+                <section class="footer-info">
+                    <section class="footer-product">
+                        <h4>Product</h4>
+                        <ul>
+                            <li>Overview</li>
+                            <li>Features</li>
+                            <li>Pricing</li>
+                            <li>Sign Up</li>
+                        </ul>
+                    </section>
+                    <section class="footer-company">
+                        <h4>Company</h4>
+                        <ul>
+                            <li>Terms and Conditions</li>
+                            <li>About Us</li>
+                            <li>Support</li>
+                            <li>Blog</li>
+                        </ul>
+                    </section>
+                </section>
+    
+        </footer>
+    
+    </body>
+    </html>

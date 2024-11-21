@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="toscriptmou.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/playfair-display" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Assets/koba_logo.png">
+                    
+    <title>Add a recipe</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+        <section class="head_logo">
+            <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+            <h1>KOBACHEF</h1>
+        </section>
+        </a>
+        <section class="head_rest">
+            <ul>
+                <li><a href="contact.html" id="contact">Contact</a></li>
+                <li><a href="allrecipes.html">Recipes</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <button id="login-profile" onclick="checkLoggedIn()">Profile</button>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+            <article class="add_recipe_body">
+            <h2 id="add_recipe_header">Create your Recipe</h2>
+            <section class="dialog-container" id="add_recipe_container">
+                <form id="add_recipe">
+                    <div>
+                        <label for="recipe_name">Recipe Name:
+                            <input type="text" id="recipe_name" name="recipe_name" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="servings">Servings:
+                            <input type="text" id="servings" name="servings" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="prep_time">Prepping Time:
+                            <input type="text" id="prep_time" name="prep_time" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="cook_time">Cooking Time: 
+                            <input type="text" id="cook_time" name="cook_time" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="calories">Calories:
+                            <input type="text" id="calories" name="calories" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="fat">Fat:
+                            <input type="text" id="fat" name="fat" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="carbs">Carbohydrates:
+                            <input type="text" id="carbs" name="carbs" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="sugars">Sugars:
+                            <input type="text" name="sugars" id="sugars" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="fibers">Fibers:
+                            <input type="text" name="fibers" id="fibers" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="protein">Protein:
+                            <input type="text" name="protein" id="protein" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="ingredients">Ingredients:
+                            <input type="text" name="ingredients" id="ingredients" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="recipe-img">Upload recipe's image:
+                            <input type="file" id="recipe_img_upload">
+                        </label>
+                    </div>   
+                    <fieldset id="meal-type">
+                        <legend>Type</legend>
+                        <label for="breakfast" class="container">Breakfast
+                            <input type="checkbox" id ="breakfast" name="meal-type"">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="meal" class="container">Meal
+                            <input type="checkbox" id ="meal" name="meal-type">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="drink" class="container">Drink
+                            <input type="checkbox" id ="drink" name="meal-type">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="dessert" class="container">Dessert
+                            <input type="checkbox" id ="dessert" name="meal-type">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="side_dish" class="container">Side Dish
+                            <input type="checkbox" id ="side_dish" name="meal-type">
+                            <span class="checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <fieldset id="vegan-or-not">
+                        <legend>Vegan</legend>
+                        <label for="non-vegan" class="container">Non-Vegan
+                            <input type="radio" id ="non-vegan" name="vegan-or-not" >
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="vegan" class="container">Vegan
+                            <input type="radio" id ="vegan" name="vegan-or-not">
+                            <span class="checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <fieldset id="calories-type">
+                        <legend>Calories</legend>
+                        <label for="dense-calories" class="container">Dense in Calories
+                            <input type="radio" id ="dense-calories" name="calories-type">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label for="low-calories" class="container">Low in Calories
+                            <input type="radio" id ="low-calories" name="calories-type">
+                            <span class="checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <label id="steps" for="steps">Provide the steps:
+                        <textarea id="steps" name="steps" rows="10" cols="75"></textarea>
+                    </label>
+                </section>
+                    <input type="button" value="Create your recipe" id="submit_recipe_button" onclick="addRecipe()">
+            </form>
+            </article>
+    </main>
+
+    <footer>
+        <section class="footer-koba">
+            
+            <!-- Left Side of Footer-->
+
+            <section class="head_logo">
+                <img src="Assets/koba_logo.png" alt="kobachef_logo" class="logo">
+                <h1 id="footer-heading">KOBACHEF</h1>
+            </section>
+            <section class="social-media">
+                <img src="Assets/linkedin.png">
+                <img src="Assets/facebook.png">
+                <img src="Assets/twitter.png">
+                <img src="Assets/instagram.png">
+            </section>
+            <section class="trademark"> 
+                <p>@2023 KOBACHEF, All rights reserved</p>
+            </section>
+        </section>
+
+            <!-- Right Side of Footer-->
+            
+            <section class="footer-info">
+                <section class="footer-product">
+                    <h4>Product</h4>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </section>
+                <section class="footer-company">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>Terms and Conditions</li>
+                        <li>About Us</li>
+                        <li>Support</li>
+                        <li>Blog</li>
+                    </ul>
+                </section>
+            </section>
+
+    </footer>
+
+</body>
+</html>
